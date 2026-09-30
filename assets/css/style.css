@@ -1,0 +1,240 @@
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+            background-color: #f1efea;
+        }
+
+        .letter-spacing-1 { letter-spacing: 1px; }
+        .letter-spacing-2 { letter-spacing: 2px; }
+        .z-index-2 { position: relative; z-index: 2; }
+        .z-index-3 { position: relative; z-index: 3; }
+        .text-muted-dark { color: #5a5c5f; }
+        .fs-7 { font-size: 0.8rem; }
+        .fs-8 { font-size: 0.7rem; }
+
+        /* Navbar Default */
+        .transition-nav {
+            transition: all 0.4s ease-in-out;
+            padding-top: 15px;
+        }
+        .navbar-nav .nav-link {
+            font-size: 0.85rem;
+            position: relative;
+            padding-bottom: 5px;
+        }
+
+        @media (min-width: 992px) {
+            .navbar-nav .nav-link.active::after, .navbar-nav .nav-link:hover::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background-color: white;
+                transition: 0.3s;
+            }
+        }
+
+        /* Glassmorphism Navbar on Scroll */
+        .navbar-scrolled {
+            background-color: rgba(20, 20, 20, 0.1) !important;
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        /* Hero Carousel */
+        .hero-carousel {
+            position: relative;
+            height: 100vh;
+            min-height: 600px;
+        }
+        .carousel-item {
+            height: 100vh;
+            min-height: 600px;
+            background-size: cover;
+            background-position: center;
+        }
+        .carousel-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(203, 203, 203, 0.2) 50%, rgba(0,0,0,0.7) 100%);
+            z-index: 1;
+        }
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            z-index: 2;
+        }
+        
+        .hero-title { font-size: 4.5rem; text-shadow: 2px 4px 10px rgba(0,0,0,0.3); }
+        .about-title { font-size: 3.5rem; }
+
+        /* Custom Carousel Indicators */
+        .custom-indicators {
+            position: absolute;
+            bottom: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 5;
+            display: d-flex;
+            gap: 10px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .custom-indicators button {
+            width: 30px;
+            height: 4px;
+            background-color: rgba(255, 255, 255, 0.4);
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+        .custom-indicators button.active {
+            background-color: white;
+            width: 40px;
+        }
+
+        /* Slide Counter Text */
+        .slide-counter {
+            position: absolute;
+            bottom: 50px;
+            right: 50px;
+            z-index: 5;
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+        }
+
+        /* Fog Transition Effect */
+        .fog-transition {
+            position: absolute;
+            bottom: 0; left: 0; width: 100%; height: 350px;
+             z-index: 3;
+            pointer-events: none; /* Let clicks pass through to carousel */
+        }
+
+        /* About Section */
+        .about-section{
+            background-image: url(../img/img.png);
+            margin-top: -200px;
+            padding-top: 190px !important;
+            background-repeat: no-repeat; /* Supaya tidak diulang */
+            background-size: cover;       /* Menyesuaikan ukuran */
+            z-index: 5;
+        }
+      
+        .discover-link {
+            border-bottom: 2px solid #000;
+            transition: 0.3s;
+            font-size: 0.85rem;
+            display: inline-block;
+        }
+        .discover-link:hover {
+            color: #555 !important;
+            border-bottom: 2px solid #555;
+            transform: translateX(5px);
+        }
+
+        /* River Cards */
+        .card-daftar {
+            background: url(../img/ss.jpg);
+        }
+        .river-card {
+            position: relative;
+            border-radius: 1rem;
+            overflow: hidden;
+            height: 320px;
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.4s, box-shadow 0.4s;
+        }
+        .river-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        .card-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.5) 40%, rgba(0,0,0,0) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 1.25rem;
+            transition: background 0.3s;
+        }
+        .river-card:hover .card-overlay {
+            background: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.1) 100%);
+        }
+        
+        /* Line Clamp for Card Description */
+        .text-clamp {
+            display: -webkit-box;
+            -webkit-line-clamp: 2; /* Batasi maksimal 2 baris */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* Modal Styles */
+        .modal-content {
+            border-radius: 1rem;
+            border: none;
+            overflow: hidden;
+        }
+        .modal-header-img {
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .modal-close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(255,255,255,0.9);
+            border-radius: 50%;
+            width: 20px; height: 20px;
+            display: flex; align-items: center; justify-content: center;
+            border: none;
+            z-index: 10;
+        }
+        .btn-baca {
+            font-size: 0.4rem;
+        }
+
+        /* Responsiveness */
+        @media (max-width: 991.98px) {
+            .navbar-collapse {
+                background-color: rgba(20, 20, 20, 0.95);
+                border-radius: 8px;
+                padding: 1rem;
+                margin-top: 15px;
+                backdrop-filter: blur(10px);
+            }
+            .hero-title { font-size: 3.5rem; }
+            .about-title { font-size: 2.8rem; }
+            .slide-counter { bottom: 30px; right: 20px; font-size: 0.8rem; }
+        }
+
+        @media (max-width: 767.98px) {
+            .hero-title { font-size: 2.5rem; }
+            .about-title { font-size: 2.2rem; }
+            .fog-transition { height: 200px; }
+            
+            /* Penyesuaian River Cards di Mobile (2 kolom) */
+            .river-card { height: 260px; }
+            .card-overlay { padding: 0.8rem; }
+            .card-title-text { font-size: 1rem !important; }
+            .text-clamp { font-size: 0.5rem; -webkit-line-clamp: 3; }
+            .btn-baca { font-size: 0.5rem; padding: 0.4rem; }
+        }
