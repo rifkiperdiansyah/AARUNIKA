@@ -51,3 +51,27 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
+
+// 5. Logic Filter Grade Paket
+function filterGrade(grade, btnElement) {
+    const cards = document.querySelectorAll('.grade-card-item');
+    const btns = document.querySelectorAll('.btn-filter-grade');
+    
+    btns.forEach(b => {
+        b.classList.remove('btn-warning', 'text-dark', 'active');
+        b.classList.add('btn-outline-light');
+    });
+    
+    if (btnElement) {
+        btnElement.classList.remove('btn-outline-light');
+        btnElement.classList.add('btn-warning', 'text-dark', 'active');
+    }
+    
+    cards.forEach(card => {
+        if (grade === 'all' || card.getAttribute('data-grade') === grade) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}

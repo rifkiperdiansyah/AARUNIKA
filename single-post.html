@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">Single Post - Detail Sungai | ARUNIKA RAFTING</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts (Montserrat) -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .post-hero {
+            position: relative;
+            height: 55vh;
+            min-height: 400px;
+            background-size: cover;
+            background-position: center;
+        }
+        .post-hero-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(15,23,42,0.95) 100%);
+        }
+        .post-content-section {
+            background-color: #f1efea;
+        }
+        .info-sidebar-card {
+            background: #ffffff;
+            border-radius: 1rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+        .gallery-img {
+            height: 180px;
+            object-fit: cover;
+            border-radius: 0.75rem;
+            transition: transform 0.3s;
+        }
+        .gallery-img:hover {
+            transform: scale(1.03);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark shadow" id="mainNav">
+        <div class="container py-1">
+            <a class="navbar-brand fw-bold fs-3 letter-spacing-1 text-white" href="index.html">ARUNIKA</a>
+            <button class="navbar-toggler border-0 shadow-none text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="bi bi-list fs-1"></i>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav gap-2 gap-lg-4 text-center text-lg-start mt-3 mt-lg-0">
+                    <li class="nav-item"><a class="nav-link text-white" href="index.html#home">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="index.html#about">ABOUT US</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-semibold text-warning" href="index.html#rivers">DAFTAR SUNGAI</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="index.html#paket">PAKET</a></li>
+                </ul>
+            </div>
+            <a href="index.html#rivers" class="btn btn-outline-light rounded-pill btn-sm d-none d-lg-inline-block px-3">
+                <i class="bi bi-arrow-left me-1"></i> Kembali Ke Beranda
+            </a>
+        </div>
+    </nav>
+
+    <!-- Post Hero Header -->
+    <header class="post-hero d-flex align-items-end pt-5" id="postHero">
+        <div class="post-hero-overlay"></div>
+        <div class="container relative z-index-2 pb-5 text-white">
+            <div class="row">
+                <div class="col-lg-9">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb text-uppercase fs-7 letter-spacing-1 mb-3">
+                            <li class="breadcrumb-item"><a href="index.html" class="text-white-50 text-decoration-none">Home</a></li>
+                            <li class="breadcrumb-item"><a href="index.html#rivers" class="text-white-50 text-decoration-none">Daftar Sungai</a></li>
+                            <li class="breadcrumb-item active text-warning" aria-current="page" id="breadcrumbTitle">Detail Sungai</li>
+                        </ol>
+                    </nav>
+                    <span class="badge bg-warning text-dark text-uppercase letter-spacing-1 fw-bold mb-2 px-3 py-2" id="riverGradeBadge">Grade III - IV</span>
+                    <h1 class="display-4 fw-bolder mb-2 text-white" id="riverTitle">Nama Sungai</h1>
+                    <p class="fs-6 opacity-75 mb-0" id="riverSubtitle"><i class="bi bi-geo-alt-fill text-danger me-1"></i> Lokasi Destinasi</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Single Post Main Content -->
+    <section class="post-content-section py-5">
+        <div class="container py-3">
+            <div class="row g-4 g-lg-5">
+                
+                <!-- Left: Post Article Body (8 Cols) -->
+                <div class="col-lg-8">
+                    <div class="bg-white p-4 p-md-5 rounded-4 shadow-sm">
+                        
+                        <!-- Single Post Image -->
+                        <div class="mb-4 overflow-hidden rounded-4 shadow-sm">
+                            <img src="" id="riverMainImg" alt="Detail Sungai" class="img-fluid w-100" style="max-height: 450px; object-fit: cover;">
+                        </div>
+
+                        <!-- Single Post Article Text -->
+                        <div class="post-body">
+                            <div class="d-flex align-items-center gap-3 mb-4 pb-3 border-bottom text-muted fs-7">
+                                <span><i class="bi bi-person-circle me-1 text-warning"></i> Team ARUNIKA</span>
+                                <span><i class="bi bi-calendar3 me-1 text-warning"></i> Updated 2026</span>
+                                <span><i class="bi bi-tag-fill me-1 text-warning"></i> Single Post River Guide</span>
+                            </div>
+
+                            <h3 class="fw-bold text-dark mb-3">Petualangan & Eksplorasi <span id="articleRiverName">Sungai</span></h3>
+                            <p class="text-secondary lh-lg fs-6 mb-4" id="riverDescLong">
+                                Loading deskripsi sungai...
+                            </p>
+
+                            <h4 class="fw-bold text-dark mt-4 mb-3"><i class="bi bi-water text-primary me-2"></i>Karakteristik & Tantangan Jeram</h4>
+                            <p class="text-secondary lh-lg fs-6 mb-4" id="riverRapidsDesc">
+                                Jalur arung jeram ini menyajikan kombinasi medan arus deras, kelokan tajam, dan tebing alam yang indah. Dipandu oleh skipper berpengalaman yang akan menjamin keamanan Anda sepanjang pengarungan.
+                            </p>
+
+                            <!-- Highlights Box -->
+                            <div class="p-4 rounded-4 bg-light border-start border-4 border-warning mb-4">
+                                <h5 class="fw-bold text-dark mb-3"><i class="bi bi-star-fill text-warning me-2"></i>Keunggulan Utama Destinasi Ini</h5>
+                                <ul class="mb-0 text-secondary fs-6 lh-lg list-unstyled" id="riverHighlights">
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Pemandangan tebing alami dan batuan vulkanik</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Air sungai yang segar dan jernih langsung dari pegunungan</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Jeram menantang yang cocok untuk menguji kekompakan tim</li>
+                                </ul>
+                            </div>
+
+                            <!-- Photo Gallery -->
+                            <h4 class="fw-bold text-dark mt-5 mb-3"><i class="bi bi-images text-warning me-2"></i>Dokumentasi Petualangan</h4>
+                            <div class="row g-3 mb-5" id="riverGallery">
+                                <div class="col-6 col-md-4"><img src="assets/img/3.JPG" class="w-100 gallery-img shadow-sm" alt="Gallery"></div>
+                                <div class="col-6 col-md-4"><img src="assets/img/img.jpeg" class="w-100 gallery-img shadow-sm" alt="Gallery"></div>
+                                <div class="col-6 col-md-4"><img src="assets/img/ss.jpg" class="w-100 gallery-img shadow-sm" alt="Gallery"></div>
+                            </div>
+
+                            <!-- CTA Box inside post -->
+                            <div class="p-4 rounded-4 text-white text-center shadow" style="background: linear-gradient(135deg, #1e293b, #0f172a);">
+                                <h4 class="fw-bold mb-2">Siap Menaklukkan Arus Sungai Ini?</h4>
+                                <p class="fs-6 opacity-75 mb-4">Pesan paket arung jeram Anda sekarang bersama ARUNIKA Rafting dan dapatkan pengalaman terbaik!</p>
+                                <div class="d-flex flex-wrap gap-2 justify-content-center">
+                                    <a href="index.html#paket" class="btn btn-warning fw-bold px-4 py-2 rounded-pill text-dark text-uppercase letter-spacing-1">Pilih Paket Rafting</a>
+                                    <a href="index.html#rivers" class="btn btn-outline-light fw-bold px-4 py-2 rounded-pill text-uppercase letter-spacing-1">Lihat Sungai Lainnya</a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Right Sidebar (4 Cols) -->
+                <div class="col-lg-4">
+                    <div class="sticky-top" style="top: 100px; z-index: 1;">
+                        
+                        <!-- Info Card -->
+                        <div class="info-sidebar-card p-4 mb-4">
+                            <h5 class="fw-bold text-dark mb-4 pb-2 border-bottom"><i class="bi bi-info-circle-fill text-warning me-2"></i>Spesifikasi River</h5>
+                            
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-light p-3 rounded-circle me-3 text-warning shadow-sm">
+                                    <i class="bi bi-speedometer2 fs-4"></i>
+                                </div>
+                                <div>
+                                    <small class="text-muted d-block text-uppercase letter-spacing-1 fs-8">Tingkat Kesulitan</small>
+                                    <strong class="text-dark fs-6" id="infoGrade">Grade III - IV</strong>
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-light p-3 rounded-circle me-3 text-warning shadow-sm">
+                                    <i class="bi bi-ruler fs-4"></i>
+                                </div>
+                                <div>
+                                    <small class="text-muted d-block text-uppercase letter-spacing-1 fs-8">Panjang Rute</small>
+                                    <strong class="text-dark fs-6" id="infoDistance">12 KM</strong>
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-light p-3 rounded-circle me-3 text-warning shadow-sm">
+                                    <i class="bi bi-clock-history fs-4"></i>
+                                </div>
+                                <div>
+                                    <small class="text-muted d-block text-uppercase letter-spacing-1 fs-8">Durasi Pengarungan</small>
+                                    <strong class="text-dark fs-6" id="infoDuration">2 - 2.5 Jam</strong>
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="bg-light p-3 rounded-circle me-3 text-warning shadow-sm">
+                                    <i class="bi bi-geo-alt fs-4"></i>
+                                </div>
+                                <div>
+                                    <small class="text-muted d-block text-uppercase letter-spacing-1 fs-8">Lokasi Destinasi</small>
+                                    <strong class="text-dark fs-6" id="infoLocation">Jawa Barat</strong>
+                                </div>
+                            </div>
+
+                            <a href="https://wa.me/?text=Halo%20saya%20tertarik%20dengan%20Rafting%20Sungai" id="waBookingBtn" target="_blank" class="btn btn-dark w-100 rounded-pill py-2 fw-bold text-uppercase letter-spacing-1 shadow-sm">
+                                <i class="bi bi-whatsapp me-2 text-success"></i> Tanya & Pesan via WA
+                            </a>
+                        </div>
+
+                        <!-- Other Rivers Card -->
+                        <div class="info-sidebar-card p-4">
+                            <h5 class="fw-bold text-dark mb-3 pb-2 border-bottom"><i class="bi bi-compass me-2 text-warning"></i>Single Post Rivers</h5>
+                            <div class="list-group list-group-flush" id="otherRiversList">
+                                <!-- Populated dynamically -->
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <p class="mb-0 fs-7 opacity-75">&copy; 2026 ARUNIKA / RONIN Rafting Adventures. All rights reserved.</p>
+    </footer>
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const riversData = {
+            "cikandang": {
+                name: "Cikandang Garut",
+                subtitle: "Kabupaten Garut, Jawa Barat",
+                grade: "Grade 1 — Rp 1.000.000 / orang",
+                distance: "18 KM",
+                duration: "3 - 4 Jam",
+                location: "Cikajang / Pakenjeng, Garut",
+                img: "assets/img/3.JPG",
+                descLong: "Sungai Cikandang Garut dikenal sebagai salah satu wahana arung jeram paling menantang dan memicu adrenalin tinggi di Jawa Barat. Mengalir langsung dari kawasan pegunungan Garut menuju pesisir selatan, Cikandang menyuguhkan kombinasi luar biasa antara jeram bernilai tinggi, arus bergemuruh, serta lanskap hutan tropis dan tebing batu yang terjal.",
+                rapidsDesc: "Jeram-jeram di Sungai Cikandang memiliki handicap alami yang bervariasi dari Grade IV hingga V. Diperlukan koordinasi kekompakan tim yang solid serta bimbingan skipper terlatih untuk melewati kelokan patahan air terjun mini dan bendungan batu raksasa.",
+                highlights: [
+                    "Pengarungan panjang 18 KM menembus rimba Garut Selatan",
+                    "Arus deras stabil dengan sensasi terjun di jeram batu ekstrem",
+                    "Pemandangan tebing alami, air terjun tersembunyi, dan udara sejuk",
+                    "Didampingi tim rescue bersertifikasi profesional & Fasilitas VIP"
+                ]
+            },
+            "cisangkuy": {
+                name: "Sungai Cisangkuy",
+                subtitle: "Pangalengan, Bandung, Jawa Barat",
+                grade: "Grade 2 — Rp 500.000 / orang",
+                distance: "11 KM",
+                duration: "2 - 2.5 Jam",
+                location: "Pangalengan, Kabupaten Bandung",
+                img: "assets/img/img.jpeg",
+                descLong: "Sungai Cisangkuy terletak di kawasan dataran tinggi Pangalengan, Kabupaten Bandung. Terkenal dengan udaranya yang segar, kebun teh di sekelilingnya, serta aliran air yang bersih bersumber dari gunung. Cisangkuy sangat favorit untuk rombongan yang menginginkan kombinasi wisata alam sejuk dan olahraga arung jeram seru.",
+                rapidsDesc: "Memiliki lebih dari 15 jeram teknikal dengan ritme yang rapat. Sensasi melintasi pepohonan rindang dan lekukan sungai menjadikan pengarungan terasa begitu dinamis dan menyenangkan.",
+                highlights: [
+                    "Kawasan sejuk di tengah perkebunan teh Pangalengan",
+                    "Jeram beruntun yang memicu tawa dan adrenalin bersama",
+                    "Fasilitas lengkap dengan area kamping dan outbound",
+                    "Sangat pas untuk acara gathering kantor dan keluarga"
+                ]
+            },
+            "cimanuk": {
+                name: "Sungai Cimanuk",
+                subtitle: "Garut & Sumedang, Jawa Barat",
+                grade: "Grade 2 — Rp 500.000 / orang",
+                distance: "15 KM",
+                duration: "2.5 - 3 Jam",
+                location: "Garut / Sumedang",
+                img: "assets/img/ss.jpg",
+                descLong: "Sungai Cimanuk merupakan salah satu sungai arteri terbesar di Jawa Barat. Karakter fisiknya yang lebar dengan volume air berlimpah menjadikan Cimanuk lokasi yang sangat memuaskan untuk mengarungi jeram skala medium hingga besar.",
+                rapidsDesc: "Sungai ini menawarkan kombinasi arus tenang untuk menikmati lanskap pegunungan dan jeram-jeram lebar yang mengguncang perahu karet dengan gelombang air yang menakjubkan.",
+                highlights: [
+                    "Sungai berukuran lebar dengan pemandangan lembah mempesona",
+                    "Jeram gelombang besar (big water rafting experience)",
+                    "Akses lokasi mudah dijangkau dari pusat kota Garut",
+                    "Keamanan terjamin dengan peralatan keselamatan berstandar"
+                ]
+            },
+            "cicatih": {
+                name: "Sungai Cicatih",
+                subtitle: "Pelabuhanratu, Sukabumi, Jawa Barat",
+                grade: "Grade 1 — Rp 1.000.000 / orang",
+                distance: "13 KM / 22 KM",
+                duration: "2 - 3.5 Jam",
+                location: "Sukabumi, Jawa Barat",
+                img: "assets/img/3.JPG",
+                descLong: "Sungai Cicatih di Sukabumi adalah destinasi arung jeram kelas berat yang sangat disukai para rafter berpengalaman maupun pemula berjiwa petualang. Mengalir deras melewati batuan granit raksasa di tengah lembah Sukabumi.",
+                rapidsDesc: "Terkenal dengan sebutan 'Raja Jeram Sukabumi', Cicatih memiliki lebih dari 20 nama jeram seperti Jeram Gigi, Jeram Aligator, dan Jeram Wall yang menguji nyali dan keterampilan mendayung.",
+                highlights: [
+                    "Volume air yang senantiasa melimpah sepanjang tahun",
+                    "Jeram berturut-turut yang memompa adrenalin tiada henti",
+                    "Pemandangan pedesaan Sunda yang ramah dan alami",
+                    "Makan siang khas masakan sunda di tepian sungai"
+                ]
+            },
+            "citarik": {
+                name: "Sungai Citarik",
+                subtitle: "Taman Nasional Gunung Halimun Salak, Sukabumi",
+                grade: "Grade 2 — Rp 500.000 / orang",
+                distance: "12 KM",
+                duration: "2 Jam",
+                location: "Cikidang, Sukabumi",
+                img: "https://images.unsplash.com/photo-1506547192931-419b45e0d4a9?auto=format&fit=crop&w=1200&q=80",
+                descLong: "Sungai Citarik adalah kiblat arung jeram Indonesia berstandar internasional. Sungai ini telah berkali-kali menjadi tuan rumah kejurnas maupun event kejuaraan arung jeram tingkat dunia.",
+                rapidsDesc: "Arus air yang relatif konstan, batuan yang tersusun artistik, serta vegetasi hutan tropis yang hijau membuat Citarik sangat aman namun tetap menantang bagi siapa saja.",
+                highlights: [
+                    "Standar keselamatan dan fasilitas internasional",
+                    "Fasilitas lengkap: cottage, flying fox, paintball, gazebo",
+                    "Sungai paling populer bagi wisatawan domestik & mancanegara",
+                    "Cocok untuk pemula, keluarga, hingga profesional"
+                ]
+            },
+            "cimanuk-jatigede": {
+                name: "Cimanuk Jati Gede",
+                subtitle: "Sumedang, Jawa Barat",
+                grade: "Grade 3 — Rp 250.000 / orang",
+                distance: "10 KM",
+                duration: "2 Jam",
+                location: "Waduk Jatigede, Sumedang",
+                img: "https://images.unsplash.com/photo-1522204523234-8729aa6e3d5f?auto=format&fit=crop&w=1200&q=80",
+                descLong: "Rute pengarungan Cimanuk bagian bawah menuju muara Waduk Jatigede Sumedang menyajikan sensasi petualangan arung jeram dengan latar belakang pemandangan waduk terbesar kedua di Indonesia.",
+                rapidsDesc: "Jeram-jeramnya cenderung bersahabat dengan riakan air yang menyegarkan, sangat ideal untuk wisata santai, foto-foto dokumentasi, dan kebersamaan.",
+                highlights: [
+                    "Pemandangan eksotis Waduk Jatigede dan perbukitan",
+                    "Tingkat kesulitan aman dan nyaman untuk pemula",
+                    "Spot foto estetik di sepanjang aliran sungai",
+                    "Dekat dengan wisata kuliner khas Sumedang"
+                ]
+            },
+            "cilutung": {
+                name: "Sungai Cilutung",
+                subtitle: "Majalengka, Jawa Barat",
+                grade: "Grade 3 — Rp 250.000 / orang",
+                distance: "9 KM",
+                duration: "1.5 - 2 Jam",
+                location: "Majalengka, Jawa Barat",
+                img: "https://images.unsplash.com/photo-1476158085676-e67f28ed9189?auto=format&fit=crop&w=1200&q=80",
+                descLong: "Sungai Cilutung di Majalengka menawarkan rute wisata arung jeram yang dipenuhi lanskap tebing cadas alami, air terjun kecil yang jatuh dari tebing, serta jembatan gantung bersejarah.",
+                rapidsDesc: "Dengan arusnya yang tenang berselang-seling jeram sedang, Cilutung menjadi pilihan tepat untuk pengarungan keluarga, anak-anak, maupun acara santai komunitas.",
+                highlights: [
+                    "Formasi tebing batu tebing yang instagramable",
+                    "Spot renang alam dan body rafting yang aman",
+                    "Daya tarik wisata tersembunyi di Majalengka",
+                    "Cocok untuk pemula dan perjalanan santai"
+                ]
+            },
+            "palayangan": {
+                name: "Sungai Palayangan",
+                subtitle: "Situ Cileunca, Pangalengan, Bandung",
+                grade: "Grade 3 — Rp 250.000 / orang",
+                distance: "5 KM",
+                duration: "1.5 Jam",
+                location: "Pangalengan, Kabupaten Bandung",
+                img: "assets/img/img.png",
+                descLong: "Sungai Palayangan merupakan salah satu lokasi rafting paling legendaris di Pangalengan Bandung. Berhulu langsung dari Danau Situ Cileunca, debit airnya stabil sepanjang tahun tanpa terpengaruh musim kemarau.",
+                rapidsDesc: "Memiliki 7 jeram utama yang tidak pernah berenti memberikan hentakan seru sepanjang 5 km. Diapit oleh lebatnya kebun teh dan hutan pinus Rahong.",
+                highlights: [
+                    "Pengarungan berhulu dari Danau Situ Cileunca yang jernih",
+                    "Pemandangan hutan pinus Rahong & kebun teh sejuk",
+                    "Debit air selalu stabil sepanjang tahun",
+                    "Bisa dikombinasikan dengan Flying Fox & Flying Board Danau"
+                ]
+            }
+        };
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            let riverKey = urlParams.get('river') || 'cikandang';
+            
+            if (!riversData[riverKey]) {
+                riverKey = 'cikandang';
+            }
+
+            const data = riversData[riverKey];
+
+            // Set Title & Breadcrumbs
+            document.title = `${data.name} - Single Post Detail | ARUNIKA Rafting`;
+            document.getElementById('breadcrumbTitle').textContent = data.name;
+            document.getElementById('riverTitle').textContent = data.name;
+            document.getElementById('articleRiverName').textContent = data.name;
+            document.getElementById('riverSubtitle').innerHTML = `<i class="bi bi-geo-alt-fill text-danger me-1"></i> ${data.subtitle}`;
+            document.getElementById('riverGradeBadge').textContent = data.grade;
+
+            // Set Images & Content
+            document.getElementById('postHero').style.backgroundImage = `url('${data.img}')`;
+            document.getElementById('riverMainImg').src = data.img;
+            document.getElementById('riverDescLong').textContent = data.descLong;
+            document.getElementById('riverRapidsDesc').textContent = data.rapidsDesc;
+
+            // Set Sidebar Specs
+            document.getElementById('infoGrade').textContent = data.grade;
+            document.getElementById('infoDistance').textContent = data.distance;
+            document.getElementById('infoDuration').textContent = data.duration;
+            document.getElementById('infoLocation').textContent = data.location;
+            document.getElementById('waBookingBtn').href = `https://wa.me/?text=Halo%20saya%20tertarik%20dengan%20Rafting%20${encodeURIComponent(data.name)}`;
+
+            // Set Highlights
+            const highlightsUl = document.getElementById('riverHighlights');
+            highlightsUl.innerHTML = data.highlights.map(item => `<li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> ${item}</li>`).join('');
+
+            // Other Rivers Sidebar List
+            const otherList = document.getElementById('otherRiversList');
+            otherList.innerHTML = Object.keys(riversData).map(key => {
+                const activeClass = key === riverKey ? 'active bg-warning text-dark fw-bold border-0 shadow-sm' : 'text-dark border-0 hover-bg-light';
+                return `<a href="single-post.html?river=${key}" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center py-2 px-3 rounded mb-1 ${activeClass}">
+                    <span>${riversData[key].name}</span>
+                    <i class="bi bi-chevron-right fs-8"></i>
+                </a>`;
+            }).join('');
+        });
+    </script>
+</body>
+</html>

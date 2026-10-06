@@ -73,7 +73,9 @@
             z-index: 2;
         }
         
-        .hero-title { font-size: 4.5rem; text-shadow: 2px 4px 10px rgba(0,0,0,0.3); }
+        .hero-title {
+            color: #deff65; 
+            font-size: 4.5rem; text-shadow: 2px 4px 10px rgba(0,0,0,0.3); }
         .about-title { font-size: 3.5rem; }
 
         /* Custom Carousel Indicators */
@@ -165,7 +167,7 @@
         .card-overlay {
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.5) 40%, rgba(0,0,0,0) 100%);
+            background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.1), rgba(0,0,0,0) 100%);
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
@@ -209,7 +211,36 @@
             z-index: 10;
         }
         .btn-baca {
-            font-size: 0.4rem;
+            font-size: 0.65rem;
+            padding: 0.4rem 0.6rem;
+        }
+
+        /* Paket Section Styling */
+        .paket-section {
+            background: linear-gradient(135deg, #547141 0%, #1a1e24 100%);
+            position: relative;
+        }
+        .bg-glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+        }
+        .paket-card {
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+        .paket-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5) !important;
+        }
+        .popular-card {
+            background: rgba(255, 193, 7, 0.06) !important;
+        }
+        .popular-badge {
+            z-index: 10;
+        }
+        .harga-box span {
+            font-family: 'Montserrat', sans-serif;
         }
 
         /* Responsiveness */
@@ -232,9 +263,10 @@
             .fog-transition { height: 200px; }
             
             /* Penyesuaian River Cards di Mobile (2 kolom) */
-            .river-card { height: 260px; }
+            .river-card { height: 280px; }
             .card-overlay { padding: 0.8rem; }
-            .card-title-text { font-size: 1rem !important; }
-            .text-clamp { font-size: 0.5rem; -webkit-line-clamp: 3; }
-            .btn-baca { font-size: 0.5rem; padding: 0.4rem; }
+            .card-title-text { font-size: 0.95rem !important; }
+            .text-clamp { font-size: 0.65rem; -webkit-line-clamp: 2; }
+            .btn-baca { font-size: 0.55rem; padding: 0.3rem 0.5rem; }
         }
+
