@@ -220,6 +220,9 @@
             background: linear-gradient(135deg, #547141 0%, #1a1e24 100%);
             position: relative;
         }
+        .gradesungai {
+            margin-bottom: 150px;
+        }
         .bg-glass {
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(12px);
@@ -242,7 +245,36 @@
         .harga-box span {
             font-family: 'Montserrat', sans-serif;
         }
+        .cikandang {
+            background: linear-gradient(135deg, #547141 0%, #1a1e24 100%);
+        }
 
+        /* Main Galeri section — bigger coverflow showcase with photos + videos */
+            .main-gallery { position: relative; height: 400px; perspective: 1300px; }
+            .main-gallery-track {
+            display: flex; align-items: center; gap: 22px;
+            height: 100%; overflow-x: auto; overflow-y: hidden;
+            scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
+            padding: 0 38%; scrollbar-width: none; transform-style: preserve-3d;
+            }
+            .main-gallery-track::-webkit-scrollbar { display: none; }
+            .gallery-3d-card {
+            position: relative; flex: 0 0 260px; height: 340px; border-radius: 20px; overflow: hidden;
+            scroll-snap-align: center; will-change: transform, opacity; background: #0a2a20;
+            box-shadow: 0 24px 48px -14px rgba(0,0,0,0.55);
+            transition: transform .15s ease-out, opacity .15s ease-out;
+            }
+            .gallery-3d-card img, .gallery-3d-card video { width: 100%; height: 100%; object-fit: cover; display: block; }
+            .gallery-video-badge {
+            position: absolute; top: 12px; left: 12px; z-index: 5;
+            display: inline-flex; align-items: center; gap: 5px;
+            background: rgba(8,34,26,0.72); backdrop-filter: blur(4px);
+            color: #fff; font-size: 11px; font-weight: 600; padding: 5px 10px; border-radius: 999px;
+            }
+                    .main-gallery { height: 300px; }
+            .gallery-3d-card { flex-basis: 190px; height: 250px; }
+            .main-gallery-track { padding: 0 28%; }
+            
         /* Responsiveness */
         @media (max-width: 991.98px) {
             .navbar-collapse {
